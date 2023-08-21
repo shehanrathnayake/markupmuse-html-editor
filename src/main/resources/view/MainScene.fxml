@@ -12,12 +12,12 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="New" />
+              <MenuItem fx:id="menuItmNew" mnemonicParsing="false" onAction="#menuItmNewOnAction" text="New" />
                   <MenuItem mnemonicParsing="false" text="Open" />
                   <MenuItem mnemonicParsing="false" text="Save" />
                   <MenuItem mnemonicParsing="false" text="Save As" />
                   <MenuItem mnemonicParsing="false" text="Print" />
-                  <MenuItem mnemonicParsing="false" text="Exit" />
+                  <MenuItem fx:id="menuItmExit" mnemonicParsing="false" onAction="#menuItmExit" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -30,8 +30,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="User Guide" />
-                  <MenuItem mnemonicParsing="false" text="About Us" />
+              <MenuItem fx:id="menuItmUserGuide" mnemonicParsing="false" onAction="#menuItmUserGuideOnAction" text="User Guide" />
+                  <MenuItem fx:id="menuItmAboutUs" mnemonicParsing="false" onAction="#menuItmAboutUsOnAction" text="About Us" />
             </items>
           </Menu>
         </menus>
