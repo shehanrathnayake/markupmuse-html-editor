@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
@@ -44,12 +45,13 @@ public class MainSceneController {
     }
 
     public void menuItmUserGuideOnAction(ActionEvent actionEvent) throws IOException {
-        AnchorPane userGuidePane = FXMLLoader.load(getClass().getResource("/view/UserGuideScene.fxml"));
+        ScrollPane userGuidePane = FXMLLoader.load(getClass().getResource("/view/UserGuideScene.fxml"));
         Scene userGuideScene = new Scene(userGuidePane);
 
         Stage primaryStage = new Stage();
         primaryStage.setScene(userGuideScene);
         primaryStage.setTitle("User Guide");
+        primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
         primaryStage.show();
     }
