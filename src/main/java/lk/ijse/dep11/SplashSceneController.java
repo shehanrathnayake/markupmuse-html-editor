@@ -20,7 +20,7 @@ public class SplashSceneController {
         PauseTransition pause = new PauseTransition(Duration.millis(2500));
 
         pause.setOnFinished(event -> {
-            System.out.println("before calling main scene");
+
             try {
                 callMainScene();
             } catch (IOException e) {
@@ -50,8 +50,6 @@ public class SplashSceneController {
         fade.playFromStart();
 
         closeSplashScreen();
-
-        System.out.println("Inside main scene");
     }
 
     private void closeSplashScreen() {
