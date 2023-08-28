@@ -1,5 +1,6 @@
 package lk.ijse.dep11;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 import static javafx.scene.paint.Color.TRANSPARENT;
 
@@ -22,8 +24,11 @@ public class AboutSceneController {
     double xOffset, yOffset;
 
     public void initialize() {
-//        Stage stage = (Stage) rootPane.getScene().getWindow();
-//        rootPane.setLayoutX(stage.getX() + (stage.getWidth() - rootPane.getWidth())/2);
+        Platform.runLater(()->{
+            Stage stage = (Stage) root.getScene().getWindow();
+            rootPane.setLayoutX(stage.getX() + (stage.getWidth() - rootPane.getWidth())/2);
+            rootPane.setLayoutY(stage.getY() + (stage.getHeight() - rootPane.getHeight())/2);
+        });
     }
 
     public void rootPaneOnMouseDragged(MouseEvent mouseEvent) {
