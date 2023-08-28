@@ -25,7 +25,7 @@
               <MenuItem mnemonicParsing="false" text="Cut" />
                   <MenuItem mnemonicParsing="false" text="Copy" />
                   <MenuItem mnemonicParsing="false" text="Paste" />
-                  <MenuItem mnemonicParsing="false" text="Save All" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
