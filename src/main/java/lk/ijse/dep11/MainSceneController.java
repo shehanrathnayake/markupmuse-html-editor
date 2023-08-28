@@ -7,6 +7,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -61,13 +62,16 @@ public class MainSceneController {
         Scene aboutUsScene = new Scene(aboutUsPane);
 
         Stage primaryStage = new Stage();
-        primaryStage.setScene(aboutUsScene);
-        primaryStage.setTitle("About Us");
+
+        primaryStage.initModality(Modality.APPLICATION_MODAL);
 
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        root.setBackground(Background.fill(Color.TRANSPARENT));
+        aboutUsPane.setBackground(Background.fill(Color.TRANSPARENT));
         aboutUsScene.setFill(Color.TRANSPARENT);
 
+        primaryStage.setScene(aboutUsScene);
+        primaryStage.setTitle("About Us");
+        primaryStage.setMaximized(true);
         primaryStage.centerOnScreen();
         primaryStage.show();
     }
