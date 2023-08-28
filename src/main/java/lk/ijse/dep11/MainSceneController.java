@@ -1,5 +1,6 @@
 package lk.ijse.dep11;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,6 +22,17 @@ public class MainSceneController {
     public MenuItem menuItmExit;
     public MenuItem menuItmUserGuide;
     public MenuItem menuItmAboutUs;
+
+    public void initialize() {
+        Platform.runLater(()->{
+            Stage stage = (Stage) root.getScene().getWindow();
+            stage.setOnCloseRequest(e->{
+//                System.out.println("Stage is about to close");
+                e.consume();
+                menuItmExit.fire();
+            });
+        });
+    }
 
     public void menuItmNewOnAction(ActionEvent actionEvent) throws IOException {
         AnchorPane newPane = FXMLLoader.load(getClass().getResource("/view/MainScene.fxml"));

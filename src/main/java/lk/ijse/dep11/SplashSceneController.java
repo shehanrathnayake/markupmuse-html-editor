@@ -15,9 +15,7 @@ public class SplashSceneController {
 
     public void initialize() throws InterruptedException, IOException {
 
-//        Thread.sleep(2500);
-
-        PauseTransition pause = new PauseTransition(Duration.millis(2500));
+        PauseTransition pause = new PauseTransition(Duration.millis(1500));
 
         pause.setOnFinished(event -> {
 
